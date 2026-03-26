@@ -1696,7 +1696,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1k±0.1%"
 			(at 144.78 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1706,7 +1706,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 144.78 77.978 90)
 			(hide yes)
 			(show_name no)
@@ -1781,7 +1781,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 161.29 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1792,7 +1792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 156.972 95.25 90)
 			(hide yes)
 			(show_name no)
@@ -1865,7 +1865,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "100±0.1%"
 			(at 128.27 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1875,7 +1875,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 128.27 89.408 90)
 			(hide yes)
 			(show_name no)
@@ -2124,7 +2124,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 115.2652 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -2210,7 +2210,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 210.82 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -2280,7 +2280,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "100±0.1%"
 			(at 128.27 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2290,7 +2290,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 128.27 77.978 90)
 			(hide yes)
 			(show_name no)
@@ -2376,7 +2376,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 136.8552 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -2462,7 +2462,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 159.7152 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -2548,7 +2548,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 196.5452 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -2715,7 +2715,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 92.202 66.04 90)
 			(hide yes)
 			(show_name no)
@@ -2800,7 +2800,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 87.122 96.52 90)
 			(hide yes)
 			(show_name no)
@@ -2873,7 +2873,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1k±0.1%"
 			(at 144.78 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2883,7 +2883,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 144.78 89.408 90)
 			(hide yes)
 			(show_name no)
@@ -2966,7 +2966,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 190.5 80.518 90)
 			(hide yes)
 			(show_name no)
@@ -3051,7 +3051,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 121.6152 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3124,7 +3124,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 172.72 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3134,7 +3134,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 172.72 66.548 90)
 			(hide yes)
 			(show_name no)
@@ -3218,7 +3218,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 173.99 78.74 0)
 			(hide yes)
 			(show_name no)

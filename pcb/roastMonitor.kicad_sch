@@ -3330,6 +3330,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "private:CH32X033F8P6"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4242,6 +4357,12 @@
 		(uuid "0520a2db-1a03-41a2-bf95-bc4fe394e770")
 	)
 	(junction
+		(at 67.31 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06d7b0a7-18e0-4072-8b6c-07ebfedb24a1")
+	)
+	(junction
 		(at 69.85 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4354,6 +4475,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "549eb582-fb7d-4da8-994f-a23e0efb1651")
+	)
+	(junction
+		(at 55.88 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56998c56-9546-469f-b25f-8271d00db202")
 	)
 	(junction
 		(at 241.3 74.93)
@@ -4482,12 +4609,40 @@
 		(uuid "f9f36d85-85bb-4b95-8c8e-f3e87b0c54b6")
 	)
 	(no_connect
+		(at 118.11 63.5)
+		(uuid "29485837-ab8a-4bfa-8232-dcb4cf0f4d1c")
+	)
+	(no_connect
 		(at 44.45 90.17)
 		(uuid "3c2790a4-25e5-44bd-8018-fc3d0eebc99b")
 	)
 	(no_connect
+		(at 118.11 68.58)
+		(uuid "5057d4b4-d15e-4617-9019-e756e519956d")
+	)
+	(no_connect
 		(at 44.45 87.63)
 		(uuid "6ddbc96a-3558-491a-97cc-b72d0519d4f2")
+	)
+	(no_connect
+		(at 118.11 86.36)
+		(uuid "73ef30b5-e780-4f26-8251-21d3f5caf0e6")
+	)
+	(no_connect
+		(at 148.59 71.12)
+		(uuid "85f7b59d-d430-414d-9fd9-9ff41035891c")
+	)
+	(no_connect
+		(at 148.59 81.28)
+		(uuid "b964a323-39ed-446f-9529-5eb0bff84660")
+	)
+	(no_connect
+		(at 118.11 66.04)
+		(uuid "de7e6115-3d76-4348-bda1-cbe4c14bab3f")
+	)
+	(no_connect
+		(at 148.59 66.04)
+		(uuid "fe748c09-5237-473c-b74a-3e8945d0d758")
 	)
 	(wire
 		(pts
@@ -5041,6 +5196,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 54.61) (xy 69.85 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54fedda7-dfe2-44b4-88e5-6263db7d22dd")
+	)
+	(wire
+		(pts
 			(xy 69.85 153.67) (xy 82.55 153.67)
 		)
 		(stroke
@@ -5301,7 +5466,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 54.61) (xy 69.85 54.61)
+			(xy 62.23 54.61) (xy 67.31 54.61)
 		)
 		(stroke
 			(width 0)
@@ -5438,6 +5603,16 @@
 			(type default)
 		)
 		(uuid "832cf63e-f372-4063-86d8-c76373cf7845")
+	)
+	(wire
+		(pts
+			(xy 55.88 99.06) (xy 62.23 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8597c3f9-71e0-4de7-a080-fa9c9f38a396")
 	)
 	(wire
 		(pts
@@ -5801,7 +5976,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 99.06) (xy 62.23 99.06)
+			(xy 29.21 99.06) (xy 55.88 99.06)
 		)
 		(stroke
 			(width 0)
@@ -6630,7 +6805,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 262.89 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -6709,7 +6884,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 254.9652 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -6790,7 +6965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 262.89 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -7150,7 +7325,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 49.53 66.548 90)
 			(hide yes)
 			(show_name no)
@@ -7232,7 +7407,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 223.2152 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -7468,7 +7643,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 65.278 90)
 			(hide yes)
 			(show_name no)
@@ -7547,7 +7722,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 248.92 69.088 90)
 			(hide yes)
 			(show_name no)
@@ -7629,7 +7804,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 226.822 29.21 90)
 			(hide yes)
 			(show_name no)
@@ -7789,7 +7964,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 23.8252 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -7946,7 +8121,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 248.92 71.628 90)
 			(hide yes)
 			(show_name no)
@@ -8026,7 +8201,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric"
 			(at 58.42 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8187,7 +8362,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
 			(at 265.43 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -8272,7 +8447,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 100.838 90)
 			(hide yes)
 			(show_name no)
@@ -8353,7 +8528,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 83.5152 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -8657,7 +8832,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 230.8352 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -8739,7 +8914,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 84.582 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -8899,7 +9074,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 115.2652 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -8981,7 +9156,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
 			(at 196.85 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -9058,7 +9233,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 72.39 134.6199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9069,7 +9244,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 68.072 133.35 90)
 			(hide yes)
 			(show_name no)
@@ -9235,7 +9410,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 33.02 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9440,7 +9615,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 262.89 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9519,7 +9694,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 56.642 138.43 90)
 			(hide yes)
 			(show_name no)
@@ -9598,7 +9773,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 49.53 69.088 90)
 			(hide yes)
 			(show_name no)
@@ -9758,7 +9933,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 169.8752 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -9839,7 +10014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 108.9152 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -9919,7 +10094,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 266.7 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -10019,7 +10194,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 63.1952 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -10169,7 +10344,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 72.39 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10180,7 +10355,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 68.072 146.05 90)
 			(hide yes)
 			(show_name no)
@@ -10759,6 +10934,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 67.31 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "acefb810-c798-41e7-8e66-0e7ade7a2290")
+		(property "Reference" "#FLG01"
+			(at 67.31 52.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 64.262 50.546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 67.31 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5f8eb3c5-0287-4569-b16c-9c0904e962d1")
+		)
+		(instances
+			(project "roastMonitor"
+				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 139.7 146.05 0)
 		(mirror y)
@@ -10791,7 +11043,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type067_RT01902HDWC_1x02_P10.00mm_Horizontal"
 			(at 139.7 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -10950,7 +11202,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 262.89 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -11185,7 +11437,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 236.22 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -11282,7 +11534,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 98.298 90)
 			(hide yes)
 			(show_name no)
@@ -11616,7 +11868,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 59.3852 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -11698,7 +11950,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 267.97 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -11798,7 +12050,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 228.6 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -12048,7 +12300,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 94.9452 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -12175,6 +12427,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 55.88 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "efe14245-1c58-499d-8def-257522a30f5a")
+		(property "Reference" "#FLG02"
+			(at 55.88 97.155 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 52.832 94.996 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 55.88 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91783fe8-beb7-4f72-aec1-cf18e29daff7")
+		)
+		(instances
+			(project "roastMonitor"
+				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 182.88 57.15 0)
 		(unit 1)
@@ -12207,7 +12536,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 183.8452 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -12287,7 +12616,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 105.41 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -12542,7 +12871,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type067_RT01902HDWC_1x02_P10.00mm_Horizontal"
 			(at 138.43 121.92 0)
 			(hide yes)
 			(show_name no)
