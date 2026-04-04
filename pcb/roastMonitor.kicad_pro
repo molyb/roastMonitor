@@ -653,7 +653,7 @@
         "uuid": "8cbf071e-2536-45d4-a88e-0a3fb194d39b"
       }
     ],
-    "used_designators": "#FLG1-2",
+    "used_designators": "D2",
     "variants": []
   },
   "sheets": [
@@ -666,8 +666,8 @@
       "amp"
     ],
     [
-      "b730e711-e28b-4a8d-bd28-d8cedea3773e",
-      "amp1"
+      "b4e4346b-9a40-42bc-b111-d4f20f5d1a1e",
+      "mcu"
     ]
   ],
   "text_variables": {},

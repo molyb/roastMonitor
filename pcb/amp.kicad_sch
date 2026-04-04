@@ -1583,10 +1583,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR023")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR019")
 					(unit 1)
@@ -1664,10 +1660,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR022")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR018")
 					(unit 1)
@@ -1747,10 +1739,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R18")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R10")
 					(unit 1)
@@ -1833,10 +1821,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R20")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R12")
 					(unit 1)
@@ -1916,10 +1900,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R17")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R9")
 					(unit 1)
@@ -1998,10 +1978,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR028")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR027")
 					(unit 1)
@@ -2080,10 +2056,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR024")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR020")
 					(unit 1)
@@ -2165,10 +2137,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C12")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C8")
 					(unit 1)
@@ -2248,10 +2216,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "TP2")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "TP1")
 					(unit 1)
@@ -2331,10 +2295,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R16")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R8")
 					(unit 1)
@@ -2417,10 +2377,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C14")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C10")
 					(unit 1)
@@ -2503,10 +2459,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C17")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C16")
 					(unit 1)
@@ -2589,10 +2541,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C15")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C11")
 					(unit 1)
@@ -2671,10 +2619,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR025")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR021")
 					(unit 1)
@@ -2756,10 +2700,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R15")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R7")
 					(unit 1)
@@ -2841,10 +2781,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R24")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R23")
 					(unit 1)
@@ -2924,10 +2860,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R19")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R11")
 					(unit 1)
@@ -3007,10 +2939,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R22")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R14")
 					(unit 1)
@@ -3092,10 +3020,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C13")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C9")
 					(unit 1)
@@ -3175,10 +3099,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R21")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R13")
 					(unit 1)
@@ -3277,10 +3197,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "U6")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "U3")
 					(unit 1)
