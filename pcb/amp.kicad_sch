@@ -1583,10 +1583,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR023")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR019")
 					(unit 1)
@@ -1664,10 +1660,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR022")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR018")
 					(unit 1)
@@ -1696,7 +1688,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1k±0.1%"
 			(at 144.78 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1706,7 +1698,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 144.78 77.978 90)
 			(hide yes)
 			(show_name no)
@@ -1747,10 +1739,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R18")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R10")
 					(unit 1)
@@ -1781,7 +1769,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 161.29 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1792,7 +1780,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 156.972 95.25 90)
 			(hide yes)
 			(show_name no)
@@ -1833,10 +1821,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R20")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R12")
 					(unit 1)
@@ -1865,7 +1849,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "100±0.1%"
 			(at 128.27 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1875,7 +1859,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 128.27 89.408 90)
 			(hide yes)
 			(show_name no)
@@ -1916,10 +1900,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R17")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R9")
 					(unit 1)
@@ -1998,10 +1978,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR028")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR027")
 					(unit 1)
@@ -2080,10 +2056,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR024")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR020")
 					(unit 1)
@@ -2124,7 +2096,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 115.2652 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -2165,10 +2137,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C12")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C8")
 					(unit 1)
@@ -2210,7 +2178,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 210.82 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -2248,10 +2216,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "TP2")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "TP1")
 					(unit 1)
@@ -2280,7 +2244,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "100±0.1%"
 			(at 128.27 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2290,7 +2254,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 128.27 77.978 90)
 			(hide yes)
 			(show_name no)
@@ -2331,10 +2295,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R16")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R8")
 					(unit 1)
@@ -2376,7 +2336,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 136.8552 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -2417,10 +2377,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C14")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C10")
 					(unit 1)
@@ -2462,7 +2418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 159.7152 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -2503,10 +2459,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C17")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C16")
 					(unit 1)
@@ -2548,7 +2500,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 196.5452 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -2589,10 +2541,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C15")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C11")
 					(unit 1)
@@ -2671,10 +2619,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "#PWR025")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "#PWR021")
 					(unit 1)
@@ -2715,7 +2659,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 92.202 66.04 90)
 			(hide yes)
 			(show_name no)
@@ -2756,10 +2700,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R15")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R7")
 					(unit 1)
@@ -2800,7 +2740,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 87.122 96.52 90)
 			(hide yes)
 			(show_name no)
@@ -2841,10 +2781,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R24")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R23")
 					(unit 1)
@@ -2873,7 +2809,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1k±0.1%"
 			(at 144.78 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2883,7 +2819,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 144.78 89.408 90)
 			(hide yes)
 			(show_name no)
@@ -2924,10 +2860,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R19")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R11")
 					(unit 1)
@@ -2966,7 +2898,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 190.5 80.518 90)
 			(hide yes)
 			(show_name no)
@@ -3007,10 +2939,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R22")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R14")
 					(unit 1)
@@ -3051,7 +2979,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 121.6152 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3092,10 +3020,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "C13")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "C9")
 					(unit 1)
@@ -3124,7 +3048,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k±0.1%"
 			(at 172.72 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3134,7 +3058,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 172.72 66.548 90)
 			(hide yes)
 			(show_name no)
@@ -3175,10 +3099,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "R21")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "R13")
 					(unit 1)
@@ -3218,7 +3138,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 173.99 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3277,10 +3197,6 @@
 		)
 		(instances
 			(project "roastMonitor"
-				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/b730e711-e28b-4a8d-bd28-d8cedea3773e"
-					(reference "U6")
-					(unit 1)
-				)
 				(path "/8cbf071e-2536-45d4-a88e-0a3fb194d39b/c98178bf-b642-47e3-b49a-c0cff214f8de"
 					(reference "U3")
 					(unit 1)
