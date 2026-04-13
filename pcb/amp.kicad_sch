@@ -1688,7 +1688,7 @@
 				)
 			)
 		)
-		(property "Value" "1k±0.1%"
+		(property "Value" "270±0.1%"
 			(at 144.78 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2809,7 +2809,7 @@
 				)
 			)
 		)
-		(property "Value" "1k±0.1%"
+		(property "Value" "270±0.1%"
 			(at 144.78 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)

@@ -4584,7 +4584,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k±0.1%"
+		(property "Value" "680±0.1%"
 			(at 72.39 134.6199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4748,7 +4748,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k±0.1%"
+		(property "Value" "100±0.1%"
 			(at 72.39 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
