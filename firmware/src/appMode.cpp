@@ -14,6 +14,13 @@
 #define HOSTNAME "roast-monitor"
 #define NETWORK_SETUP_TIMEOUT_SEC 15
 
+namespace {
+constexpr RoasterLoggerAnalog::Pins kLoggerAnalogPins{
+    .environment = A1, // GPIO3_A1
+    .bean = A2,        // GPIO4_A2
+};
+}
+
 std::unique_ptr<RoasterWebServer> httpServer;
 std::unique_ptr<RoasterWebSocketServer> wsServer;
 
@@ -23,15 +30,14 @@ static bool setupNetwork(const String& ssid, const String& password)
     WiFi.begin(ssid.c_str(), password.c_str());
 
     Serial.println("Connecting to WiFi: " + ssid);
-    unsigned int timeout_sec = NETWORK_SETUP_TIMEOUT_SEC; // timeout_secが0の場合は無限に待ち
+    unsigned int timeout_sec = NETWORK_SETUP_TIMEOUT_SEC;
     double spendTime_sec = 0.0;
     bool isConnected = false;
-    bool isTimeout = timeout_sec < spendTime_sec; // 初回はfalseになるように
+    bool isTimeout = timeout_sec < spendTime_sec;
     while (!isTimeout && !isConnected) {
         isConnected = WiFi.status() == WL_CONNECTED;
         int interval_ms = 500;
         delay(interval_ms);
-        // timeout_secが0の場合は無限に待たせるため、0より大きい場合のみspendTime_secを加算
         if (0 < timeout_sec) {
             spendTime_sec += (double)interval_ms / 1000.0;
             isTimeout = timeout_sec < spendTime_sec;
@@ -59,7 +65,7 @@ static bool setupNetwork(const String& ssid, const String& password)
         current_tm = localtime(&current_time);
     } while (current_tm->tm_year + 1900 < 2000);
     Serial.println("");
-    Serial.print((String)asctime(current_tm)); // asctimeの戻り値は改行文字を含む
+    Serial.print((String)asctime(current_tm));
 
     MDNS.begin(HOSTNAME);
     Serial.println("hostname: " HOSTNAME ".local");
@@ -68,7 +74,7 @@ static bool setupNetwork(const String& ssid, const String& password)
 
 SetupAppResult setupApp()
 {
-    String ssid = "doremi-c344f0-2.4GHz"; // デフォルトSSID
+    String ssid = "doremi-c344f0-2.4GHz";
     String password = "shirachanu0801";
 
     // if (!loadConfig(ssid, password)) {
@@ -79,10 +85,8 @@ SetupAppResult setupApp()
     httpServer = std::make_unique<RoasterWebServer>(80);
     wsServer = std::make_unique<RoasterWebSocketServer>(8080, "/ws");
     Serial.println("debug 1");
-    std::shared_ptr<RoasterLogger> logger = std::make_shared<RoasterLoggerAnalog>(120, 17); // 2分分のログを保存, SPI CSピン=17
-    Serial.println("debug 2");
-    logger->startLogging(500); // 500msごとにログを保存
-    Serial.println("debug 3");
+    std::shared_ptr<RoasterLogger> logger = std::make_shared<RoasterLoggerAnalog>(120, kLoggerAnalogPins);
+    logger->startLogging(500);
     if (httpServer == nullptr || wsServer == nullptr || logger == nullptr) {
         Serial.println("Failed to allocate memory.");
         return SetupAppResult::FAILURE_ALLOCATE_MEMORY;
@@ -112,8 +116,6 @@ SetupAppResult setupApp()
             return SetupAppResult::FAILURE_START_WS_SERVER;
         }
     } else {
-        // ネットワーク設定はされていないが、モーター制御とロギングはできるようにするため、
-        // HTTP/WebSocketサーバーの初期化失敗は致命的なエラーにしない
         Serial.println("Network is not configured. Skip starting HTTP/WebSocket Server.");
     }
 

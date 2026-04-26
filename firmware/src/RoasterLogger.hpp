@@ -10,7 +10,7 @@ public:
     RoasterLogger(uint16_t logBufferSize);
     bool startLogging(uint32_t interval_ms);
     bool stopLogging();
-    virtual bool save() {return true;}; // one shot save
+    virtual bool save() { return true; }; // one shot save
     void reset();
 
     struct Temperature {
@@ -29,6 +29,9 @@ public:
 
     std::deque<Temperature> getLog() const;
     Temperature getLatest() const;
+
+protected:
+    void appendLog(const Temperature& temperature);
 
 private:
     mutable std::shared_mutex logMutex_;

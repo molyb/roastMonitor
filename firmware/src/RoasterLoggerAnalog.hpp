@@ -4,8 +4,14 @@
 
 class RoasterLoggerAnalog : public RoasterLogger {
 public:
-    RoasterLoggerAnalog(uint16_t logBufferSize, uint8_t adcPin);
-    bool save() override;// one shot save
-protected:
-    // Max31855 thermalBeanTemperature_;
+    struct Pins {
+        uint8_t environment;
+        uint8_t bean;
+    };
+
+    RoasterLoggerAnalog(uint16_t logBufferSize, Pins pins);
+    bool save() override; // one shot save
+
+private:
+    Pins pins_;
 };

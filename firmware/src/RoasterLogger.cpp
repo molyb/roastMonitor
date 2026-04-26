@@ -31,6 +31,15 @@ void RoasterLogger::reset()
     log_.clear();
 }
 
+void RoasterLogger::appendLog(const Temperature& temperature)
+{
+    std::lock_guard<std::shared_mutex> lock(logMutex_);
+    while (logBufferSize_ <= log_.size()) {
+        log_.pop_front();
+    }
+    log_.push_back(temperature);
+}
+
 std::deque<RoasterLogger::Temperature> RoasterLogger::getLog() const
 {
     std::shared_lock<std::shared_mutex> lock(logMutex_);
