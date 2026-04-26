@@ -4584,7 +4584,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "680±0.1%"
+		(property "Value" "1k±0.1%"
 			(at 72.39 134.6199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4909,7 +4909,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "REF3040"
+		(property "Value" "REF3030"
 			(at 41.91 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
