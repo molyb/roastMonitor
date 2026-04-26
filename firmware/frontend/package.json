@@ -1,0 +1,21 @@
+{
+  "name": "artisan-wlc-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "jsdom": "^29.0.2",
+    "vite": "^7.3.1",
+    "vitest": "^4.1.4"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1"
+  }
+}

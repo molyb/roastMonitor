@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>WiFi Setup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; color: #333; background-color: #f0f2f5; }
+        .container { max-width: 400px; margin: auto; }
+        form { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .row { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #555; }
+        
+        .input-group { position: relative; display: flex; flex-direction: column; gap: 8px; }
+        input { width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; -webkit-appearance: none; }
+        
+        select { width: 100%; padding: 12px; border: 1px solid #007bff; border-radius: 8px; background-color: #f0f7ff; color: #007bff; font-size: 14px; cursor: pointer; }
+        
+        button[type="submit"] { width: 100%; padding: 14px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px; }
+        button[type="submit"]:disabled { background: #ccc; cursor: not-allowed; }
+        
+        #status { font-size: 0.85em; color: #777; margin-bottom: 12px; text-align: center; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">WiFi Setup</h2>
+        <div id="status">Scanning for networks...</div>
+        
+        <form id="wifi-form">
+            <div class="row">
+                <label for="ssid">SSID</label>
+                <div class="input-group">
+                    <input type="text" id="ssid" name="ssid" placeholder="Enter SSID" required>
+                    <select id="ssid-list" class="hidden">
+                        <option value="" disabled selected>-- Select from found WiFi --</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            
+            <button type="submit" id="submit-btn">Save & Connect</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const status = document.getElementById('status');
+            const ssidSelect = document.getElementById('ssid-list');
+            const ssidInput = document.getElementById('ssid');
+            const wifiForm = document.getElementById('wifi-form');
+            const submitBtn = document.getElementById('submit-btn');
+
+            // Scan WiFi
+            fetch('/scan')
+                .then(response => response.json())
+                .then(data => {
+                    const uniqueSSIDs = [...new Set(data)].filter(s => s && s.length > 0);
+                    if (uniqueSSIDs.length > 0) {
+                        uniqueSSIDs.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+                        uniqueSSIDs.forEach(ssid => {
+                            const option = document.createElement('option');
+                            option.value = ssid;
+                            option.textContent = ssid;
+                            ssidSelect.appendChild(option);
+                        });
+                        ssidSelect.classList.remove('hidden');
+                        status.innerText = 'Scan complete. Select or type SSID.';
+                    } else {
+                        status.innerText = 'No WiFi found. Please type SSID manually.';
+                    }
+                })
+                .catch(err => {
+                    console.error('Scan error:', err);
+                    status.innerText = 'Scan failed. Please type manually.';
+                });
+
+            // Update input from select
+            ssidSelect.addEventListener('change', () => {
+                if (ssidSelect.value) {
+                    ssidInput.value = ssidSelect.value;
+                }
+            });
+
+            // Handle Form Submission via AJAX
+            wifiForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new URLSearchParams(new FormData(wifiForm));
+                
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Saving...';
+                
+                fetch('/save', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        submitBtn.innerText = 'Saved. Restarting...';
+                    } else {
+                        throw new Error('Server returned an error');
+                    }
+                })
+                .catch(err => {
+                    alert('Failed to save configuration: ' + err.message);
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = 'Save & Connect';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

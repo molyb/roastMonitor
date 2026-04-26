@@ -15,6 +15,8 @@ void setup()
     Serial.begin(115200);
     delay(1000); // シリアルモニタが安定するまで少し待つ
     Serial.println("\nstart setup()");
+    SetupAppResult result = setupApp();
+
     // delay(2000);
     // pinMode(MODE_CONTROL_PIN, INPUT);
     // if (digitalRead(MODE_CONTROL_PIN) == HIGH) {

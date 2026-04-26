@@ -68,22 +68,26 @@ static bool setupNetwork(const String& ssid, const String& password)
 
 SetupAppResult setupApp()
 {
-    String ssid;
-    String password;
+    String ssid = "doremi-c344f0-2.4GHz"; // デフォルトSSID
+    String password = "shirachanu0801";
 
-    if (!loadConfig(ssid, password)) {
-        Serial.println("Failed to load config. Please connect to AP \"RoastMonitorSetup\" and set WiFi credentials.");
-        return SetupAppResult::FAILURE_LOAD_CONFIG;
-    }
-
+    // if (!loadConfig(ssid, password)) {
+    //     Serial.println("Failed to load config. Please connect to AP \"RoastMonitorSetup\" and set WiFi credentials.");
+    //     return SetupAppResult::FAILURE_LOAD_CONFIG;
+    // }
+    Serial.println("debug 0");
     httpServer = std::make_unique<RoasterWebServer>(80);
     wsServer = std::make_unique<RoasterWebSocketServer>(8080, "/ws");
+    Serial.println("debug 1");
     std::shared_ptr<RoasterLogger> logger = std::make_shared<RoasterLoggerAnalog>(120, 17); // 2分分のログを保存, SPI CSピン=17
+    Serial.println("debug 2");
     logger->startLogging(500); // 500msごとにログを保存
+    Serial.println("debug 3");
     if (httpServer == nullptr || wsServer == nullptr || logger == nullptr) {
         Serial.println("Failed to allocate memory.");
         return SetupAppResult::FAILURE_ALLOCATE_MEMORY;
     }
+    Serial.println("debug 4");
 
     if (setupNetwork(ssid, password)) {
         if (!httpServer->begin([logger]() -> std::vector<RoasterWebServer::WebLogEntry> {
@@ -118,10 +122,10 @@ SetupAppResult setupApp()
 
 void loopApp()
 {
-    if (httpServer->isInitialized()) {
+    if (httpServer && httpServer->isInitialized()) {
         httpServer->handleClient();
     }
-    if (wsServer->isInitialized()) {
+    if (wsServer && wsServer->isInitialized()) {
         wsServer->handleClient();
     }
 }

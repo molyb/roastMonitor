@@ -1,8 +1,9 @@
 #include "RoasterLoggerAnalog.hpp"
 
-RoasterLoggerAnalog::RoasterLoggerAnalog(uint16_t logBufferSize, uint8_t spiCsPin):
-    RoasterLogger(logBufferSize)
-    // , thermalBeanTemperature_(spiCsPin)
+#include <Arduino.h>
+
+RoasterLoggerAnalog::RoasterLoggerAnalog(uint16_t logBufferSize, uint8_t spiCsPin)
+    : RoasterLogger(logBufferSize)
 {
 }
 
