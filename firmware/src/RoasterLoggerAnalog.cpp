@@ -12,6 +12,8 @@ constexpr double kMcp9701aOffsetVolts = 0.4;
 constexpr double kMcp9701aVoltsPerDegreeC = 0.0195;
 
 constexpr double kThermocoupleAmplifierGain = 100000.0 / (100.0 + 270.0);
+constexpr double kThermocoupleOffsetVolts = 3.0 * 100.0 / (1000.0 + 100.0);
+constexpr double kThermocoupleOffsetMilliVolts = kThermocoupleOffsetVolts * 1000.0;
 
 double evaluatePolynomial(const double* coefficients, size_t coefficientCount, double x)
 {
@@ -147,11 +149,12 @@ bool RoasterLoggerAnalog::save()
     const double coldJunctionVolts = coldJunctionMilliVoltsMeasured / 1000.0;
     const double coldJunctionTemperatureC = (coldJunctionVolts - kMcp9701aOffsetVolts) / kMcp9701aVoltsPerDegreeC;
 
-    const double amplifiedMilliVolts = readAverageMilliVolts(pins_.bean);
+    const double amplifiedMilliVoltsMeasured = readAverageMilliVolts(pins_.bean);
+    const double amplifiedMilliVolts = amplifiedMilliVoltsMeasured - kThermocoupleOffsetMilliVolts;
     const double thermocoupleMilliVolts = amplifiedMilliVolts / kThermocoupleAmplifierGain;
     const double coldJunctionMilliVolts = convertKTypeTempToMv(coldJunctionTemperatureC);
     const double beanTemperatureC = convertKTypeMvToTemp(thermocoupleMilliVolts + coldJunctionMilliVolts);
 
-    appendLog(Temperature(tv, beanTemperatureC, 0));
+    appendLog(Temperature(tv, beanTemperatureC, 0.0)); // environment temperature is not measured
     return true;
 }
