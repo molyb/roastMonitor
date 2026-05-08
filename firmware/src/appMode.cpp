@@ -24,6 +24,8 @@ constexpr RoasterLoggerAnalog::Pins kLoggerAnalogPins{
 std::unique_ptr<RoasterWebServer> httpServer;
 std::unique_ptr<RoasterWebSocketServer> wsServer;
 
+Ticker ticker;
+
 static bool setupNetwork(const String& ssid, const String& password)
 {
     WiFi.mode(WIFI_STA);
@@ -76,7 +78,7 @@ SetupAppResult setupApp()
 {
     String ssid = "doremi-c344f0-2.4GHz";
     String password = "shirachanu0801";
-
+    pinMode(A0, INPUT);
     // if (!loadConfig(ssid, password)) {
     //     Serial.println("Failed to load config. Please connect to AP \"RoastMonitorSetup\" and set WiFi credentials.");
     //     return SetupAppResult::FAILURE_LOAD_CONFIG;
@@ -116,6 +118,11 @@ SetupAppResult setupApp()
         Serial.println("Network is not configured. Skip starting HTTP/WebSocket Server.");
     }
 
+    ticker.attach_ms(1000, []() -> void {
+        uint16_t value = analogRead(A0); // warm up ADC
+        uint32_t mv = analogReadMilliVolts(A0);
+        Serial.println("Analog A0: " + String(value) + " (" + String(mv) + " mV)");
+    });
     return SetupAppResult::SUCCESS;
 }
 
