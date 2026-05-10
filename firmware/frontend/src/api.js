@@ -9,3 +9,11 @@ export async function fetchLog(since) {
     }
     return response.json();
 }
+
+export async function fetchTc() {
+    const response = await fetch('/tc', { cache: 'no-store' });
+    if (!response.ok) {
+        throw new Error(`HTTP error ${response.status}`);
+    }
+    return response.json();
+}

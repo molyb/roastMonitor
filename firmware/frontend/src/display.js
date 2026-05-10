@@ -1,7 +1,11 @@
+import { fetchTc } from './api.js';
+
 const deg = '\u00B0';
 const nbsp = '\u00A0';
+const delta = '\u0394';
 
 const DEFAULT_DISPLAY_IDS = {
+    tc: 'temperature-display-tc',
     bt: 'temperature-display-bt',
     et: 'temperature-display-et',
     deltaBt: 'temperature-display-delta-bt',
@@ -28,6 +32,7 @@ export class TemperatureDisplayController {
         this.displayIds = displayIds;
         this.intervalMs = intervalMs;
         this.timer = null;
+        this.isUpdatingTc = false;
     }
 
     start() {
@@ -52,7 +57,23 @@ export class TemperatureDisplayController {
 
         updateTemperatureDisplay(this.displayIds.bt, 'BT: ', bt.temperature);
         updateTemperatureDisplay(this.displayIds.et, 'ET: ', et.temperature);
-        updateTemperatureDisplay(this.displayIds.deltaBt, 'ΔBT: ', deltaBt.deltaTemperature);
-        updateTemperatureDisplay(this.displayIds.deltaEt, 'ΔET: ', deltaEt.deltaTemperature);
+        updateTemperatureDisplay(this.displayIds.deltaBt, `${delta}BT: `, deltaBt.deltaTemperature);
+        updateTemperatureDisplay(this.displayIds.deltaEt, `${delta}ET: `, deltaEt.deltaTemperature);
+        this.updateTc();
+    }
+
+    async updateTc() {
+        if (this.isUpdatingTc || !document.getElementById(this.displayIds.tc)) return;
+
+        this.isUpdatingTc = true;
+        try {
+            const data = await fetchTc();
+            updateTemperatureDisplay(this.displayIds.tc, 'TC: ', data.tc);
+        } catch (error) {
+            updateTemperatureDisplay(this.displayIds.tc, 'TC: ', undefined);
+            console.error('TC update failed:', error);
+        } finally {
+            this.isUpdatingTc = false;
+        }
     }
 }

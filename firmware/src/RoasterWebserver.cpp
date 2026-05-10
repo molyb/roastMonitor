@@ -10,9 +10,10 @@ RoasterWebServer::RoasterWebServer(unsigned int port)
 {
 }
 
-bool RoasterWebServer::begin(std::function<std::vector<WebLogEntry>()> callbackGetLog)
+bool RoasterWebServer::begin(std::function<std::vector<WebLogEntry>()> callbackGetLog, std::function<double()> callbackGetTc)
 {
     callbackGetLog_ = callbackGetLog;
+    callbackGetTc_ = callbackGetTc;
 
     Serial.begin(115200);
 
@@ -21,6 +22,7 @@ bool RoasterWebServer::begin(std::function<std::vector<WebLogEntry>()> callbackG
     }
 
     server.on("/log", [this]() -> void { this->handleLog(); });
+    server.on("/tc", [this]() -> void { this->handleTc(); });
     server.onNotFound([this]() -> void { this->handleDefault(); });
 
     server.begin();
@@ -101,6 +103,21 @@ void RoasterWebServer::handleLog(void)
             event_obj["ET"] = temp.et;
         }
     }
+
+    String response;
+    serializeJson(doc, response);
+    server.send(200, "application/json", response);
+}
+
+void RoasterWebServer::handleTc(void)
+{
+    if (callbackGetTc_ == nullptr) {
+        server.send(500, "text/plain", "TC retrieval callback is not set.");
+        return;
+    }
+
+    JsonDocument doc;
+    doc["tc"] = callbackGetTc_();
 
     String response;
     serializeJson(doc, response);

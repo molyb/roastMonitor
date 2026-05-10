@@ -215,31 +215,35 @@ SetupAppResult setupApp()
         return SetupAppResult::FAILURE_ALLOCATE_MEMORY;
     }
 
-    // if (setupNetwork(ssid, password)) {
-    //     if (!httpServer->begin([logger]() -> std::vector<RoasterWebServer::WebLogEntry> {
-    //             auto logs = logger->getLog();
-    //             std::vector<RoasterWebServer::WebLogEntry> webLogs;
-    //             webLogs.reserve(logs.size());
-    //             for (const auto& log : logs) {
-    //                 webLogs.push_back({ log.time, log.beanTemperature, log.environmentTemperature });
-    //             }
-    //             return webLogs;
-    //         })) {
-    //         Serial.println("HTTP Server failed to initialize.");
-    //         return SetupAppResult::FAILURE_START_HTTP_SERVER;
-    //     }
-    //     bool resultBeginWsServer = wsServer->begin([logger](double& tempBt, double& tempEt) -> void {
-    //         RoasterLogger::Temperature temp = logger->getLatest();
-    //         tempBt = temp.beanTemperature;
-    //         tempEt = temp.environmentTemperature;
-    //     });
-    //     if (!resultBeginWsServer) {
-    //         Serial.println("WebSocket Server failed to initialize.");
-    //         return SetupAppResult::FAILURE_START_WS_SERVER;
-    //     }
-    // } else {
-    //     Serial.println("Network is not configured. Skip starting HTTP/WebSocket Server.");
-    // }
+    if (setupNetwork(ssid, password)) {
+        if (!httpServer->begin(
+                [logger]() -> std::vector<RoasterWebServer::WebLogEntry> {
+                    auto logs = logger->getLog();
+                    std::vector<RoasterWebServer::WebLogEntry> webLogs;
+                    webLogs.reserve(logs.size());
+                    for (const auto& log : logs) {
+                        webLogs.push_back({ log.time, log.beanTemperature, log.environmentTemperature });
+                    }
+                    return webLogs;
+                },
+                [logger]() -> double {
+                    return logger->getLatest().beanTemperature;
+                })) {
+            Serial.println("HTTP Server failed to initialize.");
+            return SetupAppResult::FAILURE_START_HTTP_SERVER;
+        }
+        bool resultBeginWsServer = wsServer->begin([logger](double& tempBt, double& tempEt) -> void {
+            RoasterLogger::Temperature temp = logger->getLatest();
+            tempBt = temp.beanTemperature;
+            tempEt = temp.environmentTemperature;
+        });
+        if (!resultBeginWsServer) {
+            Serial.println("WebSocket Server failed to initialize.");
+            return SetupAppResult::FAILURE_START_WS_SERVER;
+        }
+    } else {
+        Serial.println("Network is not configured. Skip starting HTTP/WebSocket Server.");
+    }
 
     ticker.attach_ms(1000, []() -> void {
         uint16_t value = analogRead(A0); // warm up ADC
@@ -256,7 +260,8 @@ SetupAppResult setupApp()
         Serial.println("Analog A2: " + String(mvTC) + " mV -> " + String(convertKTypeMvToTemp(thermocoupleMilliVolts)) + " [deg]");
 
         const double coldJunctionMilliVolts = convertKTypeTempToMv(tempAir);
-        Serial.println("TC: " + String(convertKTypeMvToTemp(coldJunctionMilliVolts + thermocoupleMilliVolts)) + " [deg]");
+        const double tc = convertKTypeMvToTemp(coldJunctionMilliVolts + thermocoupleMilliVolts);
+        Serial.println("TC: " + String(tc) + " [deg]");
     });
     return SetupAppResult::SUCCESS;
 }
